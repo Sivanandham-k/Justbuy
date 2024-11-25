@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justbuy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+    <!--Navbar Start-->
+
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="" class="navbar-brand fs-2 ">
+
+                <i class="fa-solid fa-shop"></i>
+                Just Buy
+
+            </a>
+            <div class="div">
+                <i class="fa-solid fa-magnifying-glass d-lg-none text-light" onclick="hide_search()"></i>
+
+                <i class="fa-solid fa-cart-plus text-light d-lg-none mx-1"></i>
+
+                <a href="register.html"><i class="fa-solid fa-circle-user d-lg-none text-light"></i></a>
+            </div>
+
+            <div class="navbar-collapse collapse" id="mynavbar">
+                <ul class="navbar-nav me-5">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item dropdown"><a href="" class="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown">Collections</a>
+                        <ul class="dropdown-menu bg-dark">
+                            <li><a href="collection-shirts.html" class="dropdown-item text-light">Shirt</a></li>
+                            <li><a href="collection-pants.html" class="dropdown-item text-light">Pants</a></li>
+                            <li><a href="collection-watch.html" class="dropdown-item text-light">Watch</a></li>
+                            <li><a href="collection-shoes.html" class="dropdown-item text-light">Shoes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link d-md-sm-none">Cart</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="register.html" class="nav-link bg-light text-dark rounded-pill Sign me-2">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Navbar End-->
+
+    <!-- content start -->
+
+    <div class="content">
+
+        <div class="row product">
+            <div class="col-lg-6 col-md-6 col-12 product-image">
+                <img src="./img/products/f1.jpg" alt="" width="100%" height="70%">
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn w-100 bg-light my-2 p-3">Add to Cart</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn w-100 bg-dark text-light my-2 p-3">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 product-content container">
+                <h2 class="my-2 text-center">Snitch Printed Shirt For Men</h2>
+                <hr>
+                <p class="limit">Limited time deals</p>
+                    
+            </div>
+        </div>
+
+    </div>
+
+    <!-- content end -->
+
+    <!-- javascript bootstrtap file -->
+
+    <script src="script.js"></script>
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- javascript bootstrtap file -->
+</body>
+
+</html>

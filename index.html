@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justbuy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+
+    <div class="container-fluid bg-dark text-light text-center py-2 d-flex justify-content-center" id="offer">
+        <div class="offer-heading">
+            <p class="fs-4 mt-1">GET FLAT 15% OFF ON YOUR FIRST PURCHASE</p>
+        </div>
+        <div class="offer">
+            <span><i class="fa-solid fa-xmark fs-3 mt-2 mx-4" onclick="offer1()"></i></span>
+        </div>
+
+    </div>
+
+    <!-- carousel start -->
+
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-intervel="50">
+                <img src="./img/others/slider-one.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-intervel="50">
+                <img src="./img/others/slider-two.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-intervel="50">
+                <img src="./img/others/slider-three.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- carousel end -->
+
+    <!--Navbar Start-->
+
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="#" class="navbar-brand fs-2 ">
+
+                <i class="fa-solid fa-shop"></i>
+                Just Buy
+
+            </a>
+            <div class="div">
+                <i class="fa-solid fa-magnifying-glass d-lg-none text-light" onclick="hide_search()"></i>
+
+                <i class="fa-solid fa-cart-plus text-light d-lg-none mx-1" data-bs-toggle="offcanvas" data-bs-target="#cart-offcanva"></i>
+
+                <a href="register.html"><i class="fa-solid fa-circle-user d-lg-none text-light"></i></a>
+            </div>
+
+            <div class="navbar-collapse collapse" id="mynavbar">
+                <ul class="navbar-nav me-5">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown">Collections</a>
+                        <ul class="dropdown-menu bg-dark">
+                            <li><a href="collection-shirts.html" class="dropdown-item text-light">Shirt</a></li>
+                            <li><a href="collection-pants.html" class="dropdown-item text-light">Pants</a></li>
+                            <li><a href="collection-watch.html" class="dropdown-item text-light">Watch</a></li>
+                            <li><a href="collection-shoes.html" class="dropdown-item text-light">Shoes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-md-sm-none" data-bs-toggle="offcanvas" data-bs-target="#cart-offcanva">Cart</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="register.html" class="nav-link bg-light text-dark rounded-pill Sign me-2">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Navbar End-->
+
+    <!-- Search Bar start -->
+
+    <div class="container mt-3 d-lg-none Search" class="hidden" id="home_search">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2 border-dark" type="search" placeholder="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Search Bar End -->
+
+    <!--Body of the Content Start-->
+
+    <div class="content">
+
+        <!--Shirt section start-->
+
+        <div class="section1">
+            <div class="section-heading">
+                <a href="collection-shirts.html" class="nav-link">
+                    <h2 style=" margin-top: 2vw;" class="d-block w-50">Shirts</h2>
+                </a>
+            </div>
+
+            <div class="shirts">
+                <div class="section1-shirts-container">
+                    <img style="width: 20vw;" src="img/products/n8.jpg" alt="">
+                    <h3>Black Shirt</h3>
+                    <P>From &#8377;499</P>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill w-50" onclick="addtocart('p1')">Add to cart</a>
+                </div>
+
+                <div class="section1-shirts-container">
+                    <img style="width: 20vw;" src="img/products/f1.jpg" alt="">
+                    <h3>Printed Shirt</h3>
+                    <p>From &#8377;599</p>
+                    <a class="nav-link bg-dark text-light rounded-pill w-50" onclick="addtocart('p2')">Add to cart</a>
+                </div>
+
+                <div class="section1-shirts-container">
+                    <img style="width: 20vw;" src="img/products/n1.jpg" alt="">
+                    <h3>Formal Blue Shirt</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill w-50" onclick="addtocart('p3')">Add to cart</a>
+                </div>
+
+                <div class="section1-shirts-container">
+                    <img style="width: 20vw;" src="img/products/n7.jpg" alt="">
+                    <h3>Double Pocket Shirt</h3>
+                    <p>From &#8377;699</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill w-50"  onclick="addtocart('p4')">Add to cart</a>
+                </div>
+
+                <div class="section1-shirts-container">
+                    <img style="width: 20vw;" src="img/products/n3.jpg" alt="">
+                    <h3>White Shirt</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill w-50" onclick="addtocart('p5')">Add to cart</a>
+                </div>
+
+                <div class="section1-shirts-container">
+                    <img style="width: 20vw;" src="img/products/f2.jpg" alt="">
+                    <h3>Printed Flower Shirt</h3>
+                    <p>From &#8377;599</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill w-50" onclick="addtocart('p6')">Add to cart</a>
+                </div>
+
+                <div class="section1-shirts-container">
+                    <img style="width: 20vw;" src="img/products/n4.jpg" alt="">
+                    <h3>Printed Shirt</h3>
+                    <p>From &#8377;599</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill w-50" onclick="addtocart('p7')">Add to cart</a>
+                </div>
+
+                <div class="section1-shirts-container">
+                    <img style="width: 20vw;" src="img/products/n2.jpg" alt="">
+                    <h3>Checked Shirt</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3" onclick="addtocart('p8')">Add to cart</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Shirt section end-->
+
+        <!--Pant section start-->
+
+        <div class="section2">
+            <div class="section-heading">
+                <a href="collection-pants.html" class="nav-link">
+                    <h2 style=" margin-top: 2vw;">Pants</h2>
+                </a>
+            </div>
+
+            <div class="pants">
+
+                <div class="section2-pants-container">
+                    <img src="img/products/f7.jpg" alt="pant" style="width: 20vw;">
+                    <h3>Over Sized Pant</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p9')">Add to cart</a>
+                </div>
+
+                <div class="section2-pants-container">
+                    <img src="img/products/n6.jpg" alt="pant" style="width: 20vw;">
+                    <h3>Half Trouser</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p10')">Add to cart</a>
+                </div>
+
+                <div class="section2-pants-container">
+                    <img src="img/pants/p3.jfif" alt="pant" style="width: 20vw;">
+                    <h3>Slim Fit Casual</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p11')">Add to cart</a>
+                </div>
+
+                <div class="section2-pants-container">
+                    <img src="img/pants/p2.jfif" alt="pant" style="width: 20vw;">
+                    <h3>Slim Fit Casual Black</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p12')">Add to cart</a>
+                </div>
+
+                <div class="section2-pants-container">
+                    <img src="img/pants/p4.jfif" alt="pant" style="width: 20vw;">
+                    <h3>Casual Olive Green</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p13')">Add to cart</a>
+                </div>
+
+                <div class="section2-pants-container">
+                    <img src="img/pants/p6.jfif" alt="pant" style="width: 20vw;">
+                    <h3>Bagy Cargo Pant</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p14')">Add to cart</a>
+                </div>
+
+                <div class="section2-pants-container">
+                    <img src="img/pants/p7.jfif" alt="pant" style="width: 20vw;">
+                    <h3>Jogers</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p15')">Add to cart</a>
+                </div>
+
+                <div class="section2-pants-container">
+                    <img src="img/pants/p8.jfif" alt="pant" style="width: 20vw;">
+                    <h3>Jeans pant</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p16')">Add to cart</a>
+                </div>
+
+            </div>
+
+        </div>
+        <!--pant section end-->
+
+        <!-- Watch section start -->
+
+        <div class="section3">
+
+            <div class="section-heading">
+                <a href="collection-watch.html" class="nav-link">
+                    <h2 style="margin-top: 2vw;">Watch</h2>
+                </a>
+            </div>
+
+            <div class="watch">
+
+                <div class="section3-watch-container">
+                    <img src="img/watchs/w1.jpg" alt="watch" style="width: 20vw;">
+                    <h3>Brown Leather Watch</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p17')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/watchs/w2.jpg" alt="watch" style="width: 20vw;">
+                    <h3>Mechanical Watch</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p18')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/watchs/w3.jpg" alt="watch" style="width: 20vw;">
+                    <h3>Clasical Watch</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p19')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/watchs/w4.jpg" alt="watch" style="width: 20vw;">
+                    <h3>Leather Watch</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p20')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/watchs/w5.jpg" alt="watch" style="width: 20vw;">
+                    <h3>Analog Watch</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p21')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/watchs/w6.jpg" alt="watch" style="width: 20vw;">
+                    <h3>Casio Watch</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p22')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/watchs/1728373423978lkfxuozn.png" alt="watch" style="width: 20vw;">
+                    <h3>Titan Watch</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p23')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/watchs/1728373428937nn0xef4r.png" alt="watch" style="width: 20vw;">
+                    <h3>Timex Watch</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p24')">Add to cart</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Watch section end -->
+
+        <!--Shoes section start-->
+
+        <div class="section4">
+
+            <div class="section-heading">
+
+                <a href="collection-shoes.html" class="nav-link">
+                    <h2 style="margin-top: 2vw;">Shoes</h2>
+                </a>
+
+            </div>
+
+            <div class="watch">
+
+                <div class="section3-watch-container">
+                    <img src="img/shoes/s1.jfif" alt="shoes" style="width: 20vw;">
+                    <h3>Sports Shoe</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p25')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/shoes/s2.jfif" alt="shoes" style="width: 20vw;">
+                    <h3>Casual White Shoe</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p26')">Add to cart</a>
+                </div>
+
+
+                <div class="section3-watch-container">
+                    <img src="img/shoes/s3.jfif" alt="shoes" style="width: 20vw;">
+                    <h3>Walking Sneakers</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p27')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/shoes/s4.jfif" alt="shoes" style="width: 20vw;">
+                    <h3>Sports Nike Shoe</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p28')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/shoes/s11.jfif" alt="shoes" style="width: 20vw;">
+                    <h3>Casual Shoe</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p29')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/shoes/s6.jfif" alt="shoes" style="width: 20vw;">
+                    <h3>Formal Brown Shoe</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p30')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/shoes/s7.jfif" alt="shoes" style="width: 20vw;">
+                    <h3>White Shoe</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p31')">Add to cart</a>
+                </div>
+
+                <div class="section3-watch-container">
+                    <img src="img/shoes/s8.jfif" alt="shoes" style="width: 20vw;">
+                    <h3>Vintage White Shoe</h3>
+                    <p>From &#8377;499</p>
+                    <a href="#" class="nav-link bg-dark text-light rounded-pill mb-3 w-50" onclick="addtocart('p32')">Add to cart</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--Shoes section end-->
+
+    </div>
+
+    <!--Body of the Content Start-->
+
+    <!-- Cart Start -->
+
+    <div class="offcanvas offcanvas-top" id="cart-offcanva">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title">Cart</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="content">
+                <div class="container">
+                    <div class="row carts" >
+                        <div class="col-lg-7 col-lg-7 col-12">
+                            <div class="items" id="items">
+                                <div class="row bg-light cart-item mb-2" id="p1">
+                                    <div class="col-5 bor">
+                                        <img style="width: 100%;" src="img/products/n8.jpg" alt="">
+                                    </div>
+                                    <div class="col-6 d-flex flex-column justify-content-center ms-2 my-2">
+                                        <div class="row mt-lg-2">
+                                            <h3>Black Shirt For Men</h3>
+                                        </div>
+                                        <div class="row mt-lg-2">
+                                            <h6 style="word-spacing: 5px;"><del>&#8377;999</del> &#8377;499</h6>                    
+                                        </div>
+                                        <div class="row mt-lg-2">
+                                            <div class="col mt-2 d-flex align-items-center">
+                                                <button onclick="increase()" class="qty btn d-flex justify-content-center align-items-center flex-row">+</button>
+                                                <div class="align mt-sm-2">
+                                                    <input class="text-center qty_value mb-1" type="text" value="1" id="qty">
+                                                </div>
+                                                <button class="qty btn d-flex justify-content-center align-items-center flex-row" onclick="decrease()">-</button>                  
+                                            </div>
+                                        </div>
+                                        <div class="row w-lg-50 mt-lg-3">
+                                            <button class="btn w-50 bg-dark text-light remove" onclick="removeitem(p1)"><i class="fa-regular fa-trash-can me-1"></i> Remove</button>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row bg-light mt-lg-2 place sticky-bottom">
+                                <button class="btn w-25 bg-dark text-light remove">Place Order</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-lg-5 col-12 price_deatail px-5" id="price_detail">
+                            <!-- <h3 class="text-center">Price Details</h3>
+                            <hr>
+                            <div class="div d-flex my-4">
+                                <h5>Price Amount</h5>
+                                <h6 class="ms-auto">999</h6>
+                            </div>
+                            <div class="div d-flex my-4">
+                                <h5>Discount Amount</h5>
+                                <h6 class="ms-auto">500</h6>
+                            </div>
+                            <div class="div d-flex my-4">
+                                <h5>Delivery Charge</h5>
+                                <h6 class="ms-auto">40</h6>
+                            </div>
+                            <hr>
+                            <div class="div d-flex my-4">
+                                <h5>Total</h5>
+                                <h6 class="ms-auto">539</h6>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart End -->
+
+    <!--Footer Start-->
+
+    <footer class="px-4 py-5 bg-dark">
+
+        <div class="footer1">
+            <div class="footer-img">
+                <img src="img/others/offer.jpg" alt="" style="width: 40vw;">
+            </div>
+            <div class="offer">
+                <h1 class="text-light" style="text-decoration: underline;">LIMITED OFFER</h1>
+                <h1>50% OFF FOR THE FIRST <br> 50 CUSTOMERS </h1>
+            </div>
+        </div>
+
+        <div class="footer-media text-light">
+            <h1>@ 2024 Justbuy.com</h1>
+            <i class="fa-brands fa-square-instagram mt-3"></i>
+            <i class="fa-brands fa-facebook mt-3"></i>
+            <i class="fa-brands fa-square-twitter mt-3"></i>
+            <i class="fa-brands fa-google-plus mt-3"></i>
+        </div>
+
+    </footer>
+
+    <!--Footer End-->
+
+    <!-- javascript bootstrtap file -->
+    <script src="script.js"></script>
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- javascript bootstrtap file -->
+
+</body>
+
+</html>
